@@ -1,9 +1,5 @@
 
-
-// const getImagenPromesa = () => new Promise( resolve => resolve('https://ajskdhaskjdhajs.com') )
-// getImagenPromesa().then( console.log );
-
-const getImagen = async() => {
+export const getImagen = async() => {
 
     try {
 
@@ -13,16 +9,13 @@ const getImagen = async() => {
 
         const { url } = data.images.original;
 
-        const img = document.createElement('img');
-        img.src = url;
-        document.body.append( img );
+        return url;
 
     } catch (error) {
-        // manejo del error
-        console.error(error)
+        // manejo del error 
+        //console.log(error)
+        return 'No se encontro la imagen'
     }
-    
-    
     
 }
 
